@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   tvos:
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 60
     env:
       EXPO_TV: "1"
@@ -29,8 +29,8 @@ jobs:
         with:
           node-version: "18"
           cache: yarn
-      - name: Select Xcode 15.4
-        run: sudo xcode-select --switch /Applications/Xcode_15.4.app/Contents/Developer
+      - name: Select Xcode 16.4
+        run: sudo xcode-select --switch /Applications/Xcode_16.4.app/Contents/Developer
       - name: Install JavaScript dependencies
         run: |
           corepack enable
